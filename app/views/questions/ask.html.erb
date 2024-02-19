@@ -1,0 +1,9 @@
+<form action="http://localhost:3000/answer" data-turbo="false">
+  <div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label" class="form-control">
+    Ask your coach anything
+  </label>
+  <input type="text" name="question" value="<%= params[:question] %>" placeholder="What's up?">
+  <input type="submit" value="Ask!" class="btn btn-primary">
+  </div>
+</form>

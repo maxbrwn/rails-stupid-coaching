@@ -1,0 +1,48 @@
+<div>
+  <figure>
+    <blockquote class="blockquote">
+      <p><%=params[:question]%></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      You
+    </figcaption>
+  </figure>
+  <br>
+</div>
+
+<div class="blockquote">
+  <%if params[:question] == "I am going to work"%>
+    <figure>
+    <blockquote class="blockquote">
+      <p><%=@answers[0]%></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Your coach
+    </figcaption>
+    </figure>
+  <%elsif params[:question].include?("?")%>
+    <figure>
+    <blockquote class="blockquote">
+      <p><%=@answers[1]%></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Your coach
+    </figcaption>
+    </figure>
+  <%else%>
+    <figure>
+    <blockquote class="blockquote">
+      <p><%=@answers[2]%></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Your coach
+    </figcaption>
+    </figure>
+  <%end %>
+
+
+  <p>
+  <br>
+    <%= link_to "Ask a new question", "http://localhost:3000/ask" %>
+  </p>
+</div>
